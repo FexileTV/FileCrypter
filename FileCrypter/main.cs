@@ -23,7 +23,7 @@ namespace FileCrypter
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            // Show Passphrase checkbo
+            // Show Passphrase checkbox
             if (checkBox1.Checked == true)
                 textBox2.UseSystemPasswordChar = false;
             else
