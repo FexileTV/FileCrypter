@@ -25,9 +25,33 @@ namespace FileCrypter
         {
             // Show Passphrase checkbox
             if (checkBox1.Checked == true)
+            {
                 textBox2.UseSystemPasswordChar = false;
+            }
             else
+            {
                 textBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+            // File Select
+            DialogResult FileSelectResult = FileSelect.ShowDialog();
+            if (FileSelectResult == DialogResult.OK)
+            {
+                textBox1.Text = FileSelect.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // File Save
+            DialogResult FileSaveResult = FileSave.ShowDialog();
+            if (FileSaveResult == DialogResult.OK)
+            {
+                MessageBox.Show(FileSelect.FileName);
+            }
         }
     }
 }

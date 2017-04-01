@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCipher.cs" />
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>

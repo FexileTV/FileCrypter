@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.FileSelect = new System.Windows.Forms.OpenFileDialog();
+            this.FileSave = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -54,14 +56,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select File";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(285, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(297, 18);
@@ -70,6 +64,15 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(285, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -97,6 +100,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Save File";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox3
             // 
@@ -109,17 +113,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Options";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 21);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(111, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Show Passphrase";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -131,6 +124,17 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 21);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(111, 17);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Show Passphrase";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // main
             // 
@@ -168,6 +172,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.OpenFileDialog FileSelect;
+        private System.Windows.Forms.SaveFileDialog FileSave;
     }
 }
 
