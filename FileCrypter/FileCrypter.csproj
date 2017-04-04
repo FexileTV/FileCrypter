@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="functions.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
